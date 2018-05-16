@@ -95,17 +95,17 @@
                   <!-- Material input email -->
                   <div class="md-form">
                       <i class="fa fa-user prefix white-text"></i>
-                      <input type="text" id="user" class="form-control white-text">
-                      <label for="user" class="white-text">User</label>
+                      <input type="text" id="user" class="form-control ">
+                      <label for="user" class="">User</label>
                   </div>
 
                   <!-- Material input password -->
                   <div class="md-form">
-                      <i class="fa fa-lock prefix white-text"></i>
-                      <input type="password" id="password" class="form-control white-text">
-                      <label for="password" class="white-text">Your password</label>
+                      <i class="fa fa-lock prefix "></i>
+                      <input type="password" id="password" class="form-control ">
+                      <label for="password" class="">Your password</label>
                   </div>
-
+                  <hr>
                   <div class="text-center mt-4">
                       <button class="btn btn-default" type="submit">Login</button>
                   </div>

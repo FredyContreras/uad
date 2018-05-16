@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use APP\Models\Roster\Employee;
+use Request;
+use View;
 
 class LoginController extends Controller
 {
@@ -35,5 +38,31 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request)
+    {
+        $this->validate($request,{
+            'user'      =>   'required',
+            'password'  =>   'required'
+        });
+
+        $parametros = $request->all();
+        dd($parametros);
+
+        $user = Employee::where('username',$request->username)
+                      ->where('password',$request->password)
+                      ->first();
+
+        if($user){
+          Session::put('user',$user);
+          // Session::has('name');//bool
+          // Session::get('name');
+          // Session::flush();
+          return view('home');
+        }else{
+          return view('login');
+        }
+
     }
 }

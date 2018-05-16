@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('login');})->name('login');
+Route::get('/home', function () {return view('home');})->name('home');
+Route::post('/login','login@LoginController')->name('loginValidate');
