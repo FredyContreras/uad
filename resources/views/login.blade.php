@@ -20,27 +20,9 @@
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 <body class="login">
-    <div id="app"></div>
-    <div class="d-inline-block position-absolute h-100 w-100">
-        <div class="animated fadeInUp login-content" >
-            <div class="login-icon">
-                <span class="icon-user"></span>
-            </div>
-            <form action="{{route('loginValidate')}}">
-                <div class="md-form form-group">
-                    <input type="text" id="login-user" class="form-control">
-                    <label for="login-user" >User</label>
-                </div>
-                <div class="md-form form-group">
-                    <input type="password" class="form-control" id="inputPassword4MD">
-                    <label for="inputPassword4MD">Password</label>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-dark-green">Sign In</button>
-            </form>
-        </div>
+    <div id="app">
+        <login></login>
     </div>
-
 </body>
 <script type="text/javascript" src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 <!-- Bootstrap tooltips -->

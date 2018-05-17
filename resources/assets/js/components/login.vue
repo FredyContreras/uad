@@ -4,13 +4,13 @@
             <div class="login-icon">
                 <span class="icon-user"></span>
             </div>
-            <form>
+            <form action="loginValidate">
                 <div class="md-form form-group">
-                    <input type="text" id="login-user" class="form-control">
+                    <input type="text" name="loginUser" id="login-user" class="form-control">
                     <label for="login-user" >User</label>
                 </div>
                 <div class="md-form form-group">
-                    <input type="password" class="form-control" id="inputPassword4MD">
+                    <input type="password" name="loginPassword" class="form-control" id="inputPassword4MD">
                     <label for="inputPassword4MD">Password</label>
                 </div>
                 <br>

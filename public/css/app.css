@@ -9443,7 +9443,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .login {
-  background: url("/img/wallpaper/login.jpg");
+  background: url("../img/wallpaper/login.jpg");
   background-size: cover;
   background-attachment: fixed;
 }

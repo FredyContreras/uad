@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use APP\Models\Roster\Employee;
-use Request;
+use Illuminate\Http\Request;
 use View;
 
 class LoginController extends Controller
@@ -42,16 +42,16 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $this->validate($request,{
-            'user'      =>   'required',
-            'password'  =>   'required'
-        });
+        // $this->validate($request,{
+        //     'user'      =>   'required',
+        //     'password'  =>   'required'
+        // });
 
         $parametros = $request->all();
-        dd($parametros);
+        // dd($parametros);
 
-        $user = Employee::where('username',$request->username)
-                      ->where('password',$request->password)
+        $user = Employee::where('username',$request->loginUser)
+                      ->where('password',$request->loginPassword)
                       ->first();
 
         if($user){
