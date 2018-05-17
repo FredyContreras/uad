@@ -1682,21 +1682,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         loginValidate: function loginValidate() {
             var url = 'login/Validate';
-            console.log(url);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, {
                 user: this.user,
                 password: __WEBPACK_IMPORTED_MODULE_2_md5___default()(this.password)
             }).then(function (response) {
-                console.log(response);
-                if (response.data == 'fail') {
-                    window.location.href = '/';
+                if (response.data.status == 'fail') {
+                    __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.warning('User or password incorrect');
+                    setTimeout(function () {
+                        window.location.href = '/';
+                    }, 2000);
                 } else {
                     window.location.href = '/home';
                 }
-                __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.success('Login success');
             }).catch(function (error) {
                 console.log(error);
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.warning('Login error');
+                setTimeout(function () {
+                    window.location.href = '/';
+                }, 2000);
             });
         }
     }
