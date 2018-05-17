@@ -11,6 +11,6 @@ class Employee extends Model
 
     public function __construct()
     {
-      $this->table = config('constants.schema').'employee';
+      $this->table = config('constants.schema').'.employee';
     }
 }
