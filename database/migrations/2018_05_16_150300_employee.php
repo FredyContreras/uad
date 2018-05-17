@@ -27,6 +27,7 @@ class Employee extends Migration
             $table->date('date_birth');
             $table->string('gender',6);
             $table->string('name',100);
+            $table->string('password',25);
             $table->timestamps();
 
             $table->primary('employee_id');
