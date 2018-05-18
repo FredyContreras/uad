@@ -37,7 +37,7 @@
                 var url =   'login/Validate';
                 axios.post(url,{
                     user    :  this.user,
-                    password:  md5(this.password)
+                    password:  md5(md5(this.password))
                 }).then(response => {
                     if (response.data.status=='fail'){
                         toastr.warning('User or password incorrect');

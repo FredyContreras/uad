@@ -13,7 +13,7 @@
     <link href="{{asset('css/fontello.css')}}" rel="stylesheet">
     <!-- style  -->
 </head>
-<body class="login">
+<body class="wallpaper login">
     <div id="app">
         <login></login>
     </div>
