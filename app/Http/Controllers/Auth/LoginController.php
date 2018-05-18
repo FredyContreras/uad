@@ -47,7 +47,7 @@ class LoginController extends Controller
                       ->where('password',$request->password)
                       ->first();
         if($user){
-          // Session::put('user',$user);
+          Session::put('user',$user->employee_id);
           // Session::has('name');//bool
           // Session::get('name');
           // Session::flush();
