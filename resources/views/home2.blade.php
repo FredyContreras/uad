@@ -20,7 +20,7 @@
         background-color: rgba(237, 244, 245, 1);
     }
     body > .layout-l{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(255,255,255,0.5);
         position: fixed;
         top: 0px;
         left:0px;
@@ -37,7 +37,7 @@
         cursor: pointer;
     }
     .layout-l .menu:hover > span{
-        color:white;
+        color:#2196F3;
     }
     .layout-l .menu.active{
         background-color:white;
@@ -45,28 +45,41 @@
     }
     .layout-l .menu > span{
         font-size: 22px;
-        color:#BDBDBD;
+        color:#78909C;
+        /* text-shadow: 0px 0px 3px white; */
     }
     .layout-l .menu.active > span{
         color:#2196F3;
     }
     body > .layout-t{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(255,255,255,0.5);
         position: fixed;
         top: 0px;
         right:0px;
         width: calc(100% - 80px);
         height: 70px;
+        padding: 10px;
         /* border-radius: 5px; */
-        /* box-shadow: 0px 2px 20px  rgba(0,0,0,0.2); */
+        box-shadow: 5px 0px 20px  rgba(0,0,0,0.2);
+    }
+    .layout-t span{
+        padding:5px 15px;
+        cursor: pointer;
+        border-radius:3px;
+    }
+    .layout-t span.active{
+        border-bottom:3px solid #2196F3;
+    }
+    .layout-t span:not(.active):hover{
+        border-bottom:3px solid  #BDBDBD;
     }
     body > .layout-content{
         position: fixed;
-        top: 90px;
+        top: 80px;
         right: 10px;
         width: calc(100% - 90px);
         /* background-color:white; */
-        height: calc(100% - 110px);
+        height: calc(100% - 90px);
         overflow: auto;
     }
     .layout-content .row{
@@ -87,7 +100,7 @@
 
     <div class="layout-l">
         <img src="{{asset('img/logo/logo.png')}}" alt="" width="50px">
-        <hr>
+        <hr style="margin-top:8px">
         <div class="menu active">
             <span class="icon-home"></span>
         </div>
@@ -106,7 +119,10 @@
         </div>
     </div>
     <div class="layout-t">
-
+        <h3 style="margin-bottom:5px">Home</h3>
+        <span class="active">Dashboard</span>
+        <span>Notices</span>
+        <span>Ticket</span>
     </div>
 
     <div class="layout-content">
@@ -133,7 +149,6 @@
 <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/menu.js')}}"></script>
 <!-- script  -->
 
 
