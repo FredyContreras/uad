@@ -27,20 +27,21 @@ li > ul {
 	box-shadow: 3px 0 10px rgba(0,0,0,.2);
 	-webkit-animation: aparecer .7s;
 	display: none;
+	background: rgba(0,0,0,0.7);
 }
 ul{
 	list-style: none;
-	background: #f3f3f3;
+	/* background: #f3f3f3; */
 }
 
 .container{
-	background: #f3f3f3;
+	background: rgba(0,0,0,0.7);
 	position: fixed;
 	height: 100%;
 	left: 0;
 	width: 200px;
 	top: 0;
-	box-shadow: 3px 0 10px rgba(0,0,0,.2);
+	box-shadow: 3px 0 10px rgba(0,0,0,.4);
 	-webkit-transition: left .5s ease;
 	-o-transition: left .5s ease;
 	transition: left .5s ease;
@@ -48,7 +49,7 @@ ul{
 }
 
 #menu_principal a, label{
-	color: #868686;
+	color: white;
 	display: block;
 	padding-left: 25px;
 	text-decoration: none;
@@ -57,7 +58,7 @@ ul{
 	transition: all .5s ease;
 }
 #menu_principal {
-	padding-top: 50%;
+	padding-top: 10px;
 }
 
 #menu_principal li {
@@ -107,7 +108,7 @@ ul{
 #menu_principal li:hover > a, #menu_principal li:hover > label{
 	color: #fff;
 	cursor: pointer;
-	background-color: #64b4db;
+	background-color: rgba(0,0,0,0.5);
 }
 
 nav ul li:hover > ul {

@@ -25,7 +25,7 @@
         box-shadow: 0px 2px 3px #ccc;
     }
 </style>
-<body>
+<body class="login">
 
     <div class="container">
 		<span class="mif-chevron-left mif-3x boton"></span>

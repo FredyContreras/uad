@@ -6,7 +6,7 @@
             </div>
             <form v-on:submit.prevent="loginValidate">
                 <div class="md-form form-group">
-                    <input type="text" name="loginUser" id="login-user" class="form-control" v-model="user">
+                    <input type="text" name="loginUser" id="login-user" class="form-control" v-model="user" autocomplete="off">
                     <label for="login-user" >User</label>
                 </div>
                 <div class="md-form form-group">
@@ -41,18 +41,14 @@
                 }).then(response => {
                     if (response.data.status=='fail'){
                         toastr.warning('User or password incorrect');
-                        setTimeout(function () {
-                            window.location.href ='/';
-                        }, 2000);
+                        this.password='';
                     }else{
                         window.location.href ='/home';
                     }
                 }).catch(error => {
                     console.log(error);
                     toastr.warning('Login error');
-                    setTimeout(function () {
-                        window.location.href ='/';
-                    }, 2000);
+                    this.password='';
                 });
             }
         }

@@ -9701,6 +9701,6 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 42px;
 }
 
-.login label, .login input {
+.login .login-content label, .login .login-content input {
   color: white !important;
 }

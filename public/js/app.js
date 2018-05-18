@@ -1681,6 +1681,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         loginValidate: function loginValidate() {
+            var _this = this;
+
             var url = 'login/Validate';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, {
                 user: this.user,
@@ -1688,18 +1690,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 if (response.data.status == 'fail') {
                     __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.warning('User or password incorrect');
-                    setTimeout(function () {
-                        window.location.href = '/';
-                    }, 2000);
+                    _this.password = '';
                 } else {
                     window.location.href = '/home';
                 }
             }).catch(function (error) {
                 console.log(error);
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.warning('Login error');
-                setTimeout(function () {
-                    window.location.href = '/';
-                }, 2000);
+                _this.password = '';
             });
         }
     }
@@ -37076,7 +37074,12 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "text", name: "loginUser", id: "login-user" },
+                attrs: {
+                  type: "text",
+                  name: "loginUser",
+                  id: "login-user",
+                  autocomplete: "off"
+                },
                 domProps: { value: _vm.user },
                 on: {
                   input: function($event) {
