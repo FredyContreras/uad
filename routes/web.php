@@ -13,5 +13,5 @@
 
 
 Route::get('/', function () {return view('login');});
-Route::get('/home', function () {return 'hola mundo';});
+Route::get('/home', function () {return view('home');});
 Route::post('login/Validate','Auth\LoginController@login');

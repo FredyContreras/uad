@@ -42,18 +42,15 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        // dd($parametros);
         $user = Employee::where('employee_id',$request->user)
                       ->where('password',$request->password)
                       ->first();
         if($user){
-          Session::put('user',$user->employee_id);
-          // Session::has('name');//bool
-          // Session::get('name');
-          // Session::flush();
-          return 'success';
+          session(['user'=>$user]);
+          // return Redirect::back()->withInput(Input::all());
+          return ['status'=>'success','name'=>$user->name];
         }else{
-          return 'fail';
+          return ['status'=>'fail'];
         }
 
     }

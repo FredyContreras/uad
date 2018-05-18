@@ -35,21 +35,24 @@
         methods: {
             loginValidate: function(){
                 var url =   'login/Validate';
-                console.log(url);
                 axios.post(url,{
                     user    :  this.user,
-                    password:  md5(this.password),
+                    password:  md5(this.password)
                 }).then(response => {
-                    console.log(response);
-                    if (response.data=='fail'){
-                        window.location.href ='/';
+                    if (response.data.status=='fail'){
+                        toastr.warning('User or password incorrect');
+                        setTimeout(function () {
+                            window.location.href ='/';
+                        }, 2000);
                     }else{
                         window.location.href ='/home';
                     }
-                    toastr.success('Login success');
                 }).catch(error => {
                     console.log(error);
                     toastr.warning('Login error');
+                    setTimeout(function () {
+                        window.location.href ='/';
+                    }, 2000);
                 });
             }
         }
