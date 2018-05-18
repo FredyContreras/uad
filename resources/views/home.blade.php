@@ -26,8 +26,9 @@
         left:0px;
         height: 100% ;
         width: 200px;
+        border-right:1px solid #ccc;
         /* padding:10px; */
-        box-shadow: 0px 2px 20px  rgba(0,0,0,0.2);
+        /* box-shadow: 0px 2px 20px  rgba(0,0,0,0.2); */
     }
     .layout-l .menu{
         width: 100%;
@@ -50,7 +51,7 @@
         color:#2196F3;
     }
     body > .layout-t{
-        background-color: rgba(0,0,0,1);
+        /* background-color: rgba(0,0,0,1); */
         position: fixed;
         top: 0px;
         right:0px;
@@ -69,7 +70,7 @@
         cursor: pointer;
     }
     .layout-t .ly-t-right:hover{
-        background-color: #2196F3;
+        background-color: rgba(0,0,0,0.3);
     }
 
     .layout-t .ly-t-right > span{
@@ -92,10 +93,9 @@
         width: 100%;
         height: 80px;
         padding-left: 50px;
-        border-bottom: 1px solid #2196F3;
+        border-bottom: 1px solid #00897b ;
     }
     .layout-content .title > .abrev{
-        background: #2196F3;
         position: relative;
         width: 70px;
         height: 70px;
@@ -147,8 +147,8 @@
             Config
         </div>
     </div>
-    <div class="layout-t">
-        <div style="background-color:#2196F3;display:inline-block;height:50px;width:50px;text-align:center;padding-top:10px">
+    <div class="layout-t teal">
+        <div class="tield darken-4" style="display:inline-block;height:50px;width:50px;text-align:center;padding-top:10px">
             <span class="icon-th-1" style="font-size:19px"></span>
         </div>
         <div style="display:inline;padding-left:10px;font-size:24px">
@@ -173,7 +173,7 @@
 
     <div class="layout-content">
         <div class="title">
-            <div class="abrev">
+            <div class="abrev teal">
                 HM
             </div>
             <h2 style="display:inline-block">Home</h2>

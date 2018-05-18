@@ -1692,7 +1692,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.warning('User or password incorrect');
                     _this.password = '';
                 } else {
-                    window.location.href = '/home';
+                    window.location.href = 'home';
                 }
             }).catch(function (error) {
                 console.log(error);

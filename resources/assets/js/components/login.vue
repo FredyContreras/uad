@@ -43,7 +43,7 @@
                         toastr.warning('User or password incorrect');
                         this.password='';
                     }else{
-                        window.location.href ='/home';
+                        window.location.href ='home';
                     }
                 }).catch(error => {
                     console.log(error);
