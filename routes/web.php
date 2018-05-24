@@ -16,3 +16,4 @@ Route::get('/', function () {return view('login');});
 Route::get('/home', function () {return view('home');});
 Route::get('/home2', function () {return view('home2');});
 Route::post('login/Validate','Auth\LoginController@login');
+Route::get('/test','Roster\RosterController@test');

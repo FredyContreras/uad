@@ -160,6 +160,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //auditing provideInterface 'App\Models\Roster\Auditable' not foundr
+        OwenIt\Auditing\AuditingServiceProvider::class,
+
     ],
 
     /*
@@ -208,6 +211,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Auditable' => OwenIt\Auditing\AuditingServiceProvider::class,
 
     ],
 

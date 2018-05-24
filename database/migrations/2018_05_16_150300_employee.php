@@ -32,6 +32,7 @@ class Employee extends Migration
 
             $table->primary('employee_id');
         });
+
     }
 
     /**
